@@ -1,0 +1,29 @@
+footer {
+    position: sticky;
+    bottom: 0px;
+}
+
+#footer_container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    max-height: 140px;
+    padding: 0px 150px;
+    background-color: #F2F2F2;
+    line-height: 45px;
+    padding-bottom: 10px;
+}
+
+#footer_container a{
+    text-decoration: none;
+    padding: 15px;
+}
+
+#footer_container a:hover {
+    text-decoration: underline;
+}
+
+#footer_container img {
+    height: 14px;
+}

@@ -1,0 +1,74 @@
+#header_container {
+    display: flex;
+    justify-content: flex-end;
+    height: 60px;
+    padding: 6px;
+}
+
+#menue_punkte {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 350px;
+}
+
+#menue_punkte img {
+    display: flex;
+    justify-content: center;
+    max-width: 70%;
+}
+
+#menue_links a {
+    text-decoration: none;
+    align-items: center;
+    color: #1f1f1f;
+    padding: 10px;
+}
+
+#menue_links a:hover {
+    text-decoration: underline;
+}
+
+#menue_icon_container {
+    display: flex;
+    justify-content: center;
+    margin: 4px 4px 4px 0px;
+    padding: 5px;
+    max-width: 40px;
+    max-height: 40px;
+}
+
+#menue_icon_container img {
+    width: 70%;
+    text-align: center;
+}
+
+#menue_icon_container:hover {
+    transition: 0.65s;
+    background-color: rgb(240, 240, 240);
+    border-radius: 50px;
+}
+
+#anmelden_container {
+    background-color: #0b57d0;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    max-height: 45px;
+    padding-left: 5px;
+    margin-right: 20px;
+}
+
+#anmelden_container a {
+    text-decoration: none;
+    color: white;
+    font-family: "Google Sans Text", Roboto, Helvetica, Arial, sans-serif;
+    margin: 15px;
+    line-height: 18px;
+}
+
+#anmelden_container:hover {
+    box-shadow: 1.5px 1.5px 1px rgb(145, 145, 145, 0.9);
+}

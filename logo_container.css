@@ -1,0 +1,19 @@
+
+#logo_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 40vh;
+}
+
+#google_logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#google_logo img {
+    max-width: 271.96px;
+    max-height: 91.99px;
+    bottom: 0px;
+}

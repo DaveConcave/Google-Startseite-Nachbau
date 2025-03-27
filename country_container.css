@@ -1,0 +1,9 @@
+#country_container{
+    display: flex;
+    background-color: #F2F2F2;
+    min-height: 30px;
+    border-bottom: 1px solid #cccccc;
+    padding: 15px 30px;
+    font-size: 15px;
+    align-items: center;
+}

@@ -1,10 +1,9 @@
 
 /* globale Variablen / Arrays */
-let originalText;
+let originalText = "";
 let eingegebeneVerschiebung;
-let verschluesselterText;
+let verschluesselterText = "";
 const alphabet_array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-const splittedIntoCharacters_array = [];
 
 document.getElementById('button').addEventListener('click', function(){
     //elementeLoeschen()
@@ -22,7 +21,7 @@ verschluesselterText = textVerschluesseln();
 
 function saveUserInputs(){
     originalText = document.getElementById('text_input').value;
-    eingegebeneVerschiebung = (document.getElementById('shift_input').value) % 25;
+    eingegebeneVerschiebung = (document.getElementById('shift_input').value) % 26;
 }
 
 
@@ -53,20 +52,23 @@ function originalTextAusgeben(){
 
 
 function textVerschluesseln(){
-    //const verschluesselterText_array = [];
+    const verschluesselterText_array = [];
     let counter = 0;
     const split_array = originalText.split("");
-
-    
-    
     
     while (counter < split_array.length) {
-        const shift = eingegebeneVerschiebung + alphabet_array.indexOf(split_array[counter]);
-        console.log(alphabet_array[shift]);
+        const shift = (eingegebeneVerschiebung + alphabet_array.indexOf(split_array[counter])) % 26;
+        
+        if (alphabet_array.includes(alphabet_array[shift])){
+            console.log(alphabet_array[shift]);
+        }
+
+        
         counter++;
     }
+    
 
-      
+
 }
 
 

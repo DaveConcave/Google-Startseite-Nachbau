@@ -1,12 +1,11 @@
 
 /* globale Variablen / Arrays */
 let originalText = "";
-let eingegebeneVerschiebung;
-let verschluesselterText = "";
+let userShift;
+let encryptedText = "";
 const alphabet_array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 document.getElementById('button').addEventListener('click', function(){
-    //elementeLoeschen()
     saveUserInputs();
     verschiebungAusgeben();
     originalTextAusgeben();
@@ -14,14 +13,14 @@ document.getElementById('button').addEventListener('click', function(){
     verschluesseltenTextAusgeben();
 });
 
-verschluesselterText = textVerschluesseln();
+encryptedText = textVerschluesseln();
 
 /* ------------ Funktionen ------------ */
 
 
 function saveUserInputs(){
     originalText = document.getElementById('text_input').value;
-    eingegebeneVerschiebung = (document.getElementById('shift_input').value) % 26;
+    userShift = (document.getElementById('shift_input').value) % 26;
 }
 
 
@@ -32,7 +31,7 @@ function verschiebungAusgeben(){
     document.getElementById('ergebnis_container').appendChild(ueberschrift_shift);
 
     const textAusgabefeld = document.createElement("p");
-    textAusgabefeld.textContent = eingegebeneVerschiebung;
+    textAusgabefeld.textContent = userShift;
     textAusgabefeld.id = "original_text";
     document.getElementById('ergebnis_container').appendChild(textAusgabefeld);
 }
@@ -57,18 +56,14 @@ function textVerschluesseln(){
     const split_array = originalText.split("");
     
     while (counter < split_array.length) {
-        const shift = (eingegebeneVerschiebung + alphabet_array.indexOf(split_array[counter])) % 26;
-        
+        const shift = (userShift + alphabet_array.indexOf(split_array[counter])) % 26;
+
         if (alphabet_array.includes(alphabet_array[shift])){
             console.log(alphabet_array[shift]);
         }
 
-        
         counter++;
     }
-    
-
-
 }
 
 
@@ -79,7 +74,7 @@ function verschluesseltenTextAusgeben(){
     document.getElementById('ergebnis_container').appendChild(ueberschrift_encrypted);
 
     const textAusgabefeld = document.createElement("p");
-    textAusgabefeld.textContent = verschluesselterText;
+    textAusgabefeld.textContent = encryptedText;
     textAusgabefeld.id = "original_text";
     document.getElementById('ergebnis_container').appendChild(textAusgabefeld);
 }

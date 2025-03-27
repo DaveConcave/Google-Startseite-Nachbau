@@ -19,14 +19,6 @@ verschluesselterText = textVerschluesseln();
 
 /* ------------ Funktionen ------------ */
 
-/*
-function elementeLoeschen(){
-    ueberschrift_shift.remove();
-    ueberschrift_original.remove();
-    ueberschrift_encrypted.remove();
-    textAusgabefeld.remove();
-}
-*/
 
 function saveUserInputs(){
     originalText = document.getElementById('text_input').value;
@@ -60,49 +52,22 @@ function originalTextAusgeben(){
 }
 
 
-/* -------------------------- MAGIC FUNCTIONs -------------------------- */
-
 function textVerschluesseln(){
-    const verschluesselterText_array = [];
+    //const verschluesselterText_array = [];
     let counter = 0;
     const split_array = originalText.split("");
 
-    const shift = eingegebeneVerschiebung + alphabet_array.indexOf(split_array[counter]);
+    
     
     
     while (counter < split_array.length) {
-        console.log(split_array[counter]);
-        console.log(alphabet_array.indexOf(split_array[counter]));
-        console.log("Shift: " + shift);
+        const shift = eingegebeneVerschiebung + alphabet_array.indexOf(split_array[counter]);
+        console.log(alphabet_array[shift]);
         counter++;
     }
 
       
 }
-
-
-/* Einzelschritte bei Textverschlüsselung
-    - Text in Zeichen splitten und diese in Array ablegen
-    - Zeichen-Index in Original-Alphabet bestimmen
-    - Zeichen-Index um Shift-Zahl erhöhen
-*/
-
-
-
-
-
-
-
-function shiftCharacter(){
-    console.log("");
-}
-
-
-
-
-
-/* -------------------------- Ende MAGIC FUNCTIONs -------------------------- */
-
 
 
 function verschluesseltenTextAusgeben(){

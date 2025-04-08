@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: rgb(86, 120, 182);
+    background-color: rgb(133, 68, 255);
 }
 
 /***** Header *****/
@@ -58,6 +58,12 @@ header p:hover {
 
 /* Nutzereingaben */
 
+#eingabefelder {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 #nutzer_eingaben {
     display: flex;
     justify-content: center;
@@ -70,13 +76,24 @@ header p:hover {
 }
 
 #nutzer_eingaben span {
-    margin: 40px;
+    margin: 5px;
 }
 
-input {
-    font-size: 1.15em;
-    height: 50px;
+#text_input {
+    resize: none;
+    font-size: 2em;
+    height: 100px;
+    width: 250px;
     border-radius: 3px;
+}
+
+#shift_input {
+    resize: none;
+    font-size: 2em;
+    height: 40px;
+    width: 130px;
+    border-radius: 3px;
+    text-align: center;
 }
 
 button {

@@ -1,10 +1,17 @@
 
 /* globale Variablen / Arrays */
+<<<<<<< HEAD
 let originalText;
 let shift = 0;
 let verschluesselterText;
 const alphabet_small_array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 const alphabet_big_array = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+=======
+let originalText = "";
+let userShift;
+let encryptedText = "";
+const alphabet_array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+>>>>>>> c5df3b34ad31bf0c6a507147e131a14af00daa06
 
 document.getElementById('button').addEventListener('click', function(){
     saveUserInputs();
@@ -14,14 +21,22 @@ document.getElementById('button').addEventListener('click', function(){
     verschluesseltenTextAusgeben();
 });
 
+<<<<<<< HEAD
 verschluesselterText += textVerschluesseln();
+=======
+encryptedText = textVerschluesseln();
+>>>>>>> c5df3b34ad31bf0c6a507147e131a14af00daa06
 
 /* ------------ Funktionen ------------ */
 
 
 function saveUserInputs(){
     originalText = document.getElementById('text_input').value;
+<<<<<<< HEAD
     shift = parseInt((document.getElementById('shift_input').value));
+=======
+    userShift = (document.getElementById('shift_input').value) % 26;
+>>>>>>> c5df3b34ad31bf0c6a507147e131a14af00daa06
 }
 
 /*
@@ -32,7 +47,11 @@ function verschiebungAusgeben(){
     document.getElementById('ergebnis_container').appendChild(ueberschrift_shift);
 
     const textAusgabefeld = document.createElement("p");
+<<<<<<< HEAD
     textAusgabefeld.textContent = shift;
+=======
+    textAusgabefeld.textContent = userShift;
+>>>>>>> c5df3b34ad31bf0c6a507147e131a14af00daa06
     textAusgabefeld.id = "original_text";
     document.getElementById('ergebnis_container').appendChild(textAusgabefeld);
 }
@@ -51,6 +70,7 @@ function originalTextAusgeben(){
     document.getElementById('ergebnis_container').appendChild(textAusgabefeld);
 }
 
+<<<<<<< HEAD
 /* -------------------------- MAGIC FUNCTIONs -------------------------- */
 
 function textVerschluesseln(){
@@ -121,6 +141,26 @@ function textVerschluesseln(){
 /* -------------------------- Ende MAGIC FUNCTIONs -------------------------- */
 
 
+=======
+
+function textVerschluesseln(){
+    const verschluesselterText_array = [];
+    let counter = 0;
+    const split_array = originalText.split("");
+    
+    while (counter < split_array.length) {
+        const shift = (userShift + alphabet_array.indexOf(split_array[counter])) % 26;
+
+        if (alphabet_array.includes(alphabet_array[shift])){
+            console.log(alphabet_array[shift]);
+        }
+
+        counter++;
+    }
+}
+
+
+>>>>>>> c5df3b34ad31bf0c6a507147e131a14af00daa06
 function verschluesseltenTextAusgeben(){
     const ueberschrift_encrypted = document.createElement("h1");
     ueberschrift_encrypted.textContent = "Verschlüsselter Text:";
@@ -128,7 +168,11 @@ function verschluesseltenTextAusgeben(){
     document.getElementById('ergebnis_container').appendChild(ueberschrift_encrypted);
 
     const textAusgabefeld = document.createElement("p");
+<<<<<<< HEAD
     textAusgabefeld.textContent = text_im_aufbau;
+=======
+    textAusgabefeld.textContent = encryptedText;
+>>>>>>> c5df3b34ad31bf0c6a507147e131a14af00daa06
     textAusgabefeld.id = "original_text";
     document.getElementById('ergebnis_container').appendChild(textAusgabefeld);
 }

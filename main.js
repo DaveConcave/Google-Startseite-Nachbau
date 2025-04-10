@@ -8,12 +8,7 @@ const alphabet_big_array = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K
 
 document.getElementById('button').addEventListener('click', function(){
     saveUserInputs();
-    //verschiebungAusgeben();
-    //originalTextAusgeben();
-
-    // textVerschluesseln();
     verschluesselterText = textVerschluesseln();
-    // verschluesseltenTextAusgeben();
     textInTextfeldAusgeben();
 });
 

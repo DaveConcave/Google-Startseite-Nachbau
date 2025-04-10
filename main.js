@@ -19,7 +19,7 @@ function saveUserInputs(){
     userShift = (document.getElementById('shift_input').value) % 26;
 }
 
-
+//
 function textInTextfeldAusgeben() {
     const textfeld = document.getElementById("textfeld_ausgabe");
     textfeld.value = verschluesselterText; // Setzt den Inhalt der Variablen in das Textfeld

@@ -8,8 +8,11 @@ const alphabet_big_array = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K
 
 document.getElementById('button').addEventListener('click', function(){
     saveUserInputs();
+    console.log(originalText);
+    
     verschluesselterText = textVerschluesseln();
     textInTextfeldAusgeben();
+    console.log(split_array);
 });
 
 
@@ -19,7 +22,7 @@ function saveUserInputs(){
     userShift = (document.getElementById('shift_input').value) % 26;
 }
 
-//
+
 function textInTextfeldAusgeben() {
     const textfeld = document.getElementById("textfeld_ausgabe");
     textfeld.value = verschluesselterText; // Setzt den Inhalt der Variablen in das Textfeld
